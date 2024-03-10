@@ -13,7 +13,7 @@ const Sidebar: React.FC = () => {
   };
 
   return (
-    <div className="w-1/5 flex flex-col justify-start  text-black text-[14px] overflow-y-auto shadow-lg">
+    <div className="w-1/5 h-full flex flex-col justify-between text-black text-[14px] overflow-y-auto shadow-lg">
       <div className="">
         {/* Dashboard */}
         <Link href="/dashboard">
@@ -29,11 +29,8 @@ const Sidebar: React.FC = () => {
           </div>
         </Link>
         {/* Errands */}
-        <div
-          className="flex items-center justify-between px-4 py-4 cursor-pointer"
-          onClick={handleErrandsClick}
-        >
-          <div className="flex items-center">
+        <Link href="/dashboard/errands">
+          <div className="flex items-center px-4 py-4">
             <Image
               className="mr-8"
               src="/errands.svg"
@@ -43,14 +40,14 @@ const Sidebar: React.FC = () => {
             />
             Errands
           </div>
-          {showErrandsDropdown ? (
+          {/* {showErrandsDropdown ? (
             <FaChevronDown className="h-4 w-4" />
           ) : (
             <FaChevronRight className="h-4 w-4" />
-          )}
-        </div>
+          )} */}
+        </Link>
         {/* Errands Dropdown */}
-        {showErrandsDropdown && (
+        {/* {showErrandsDropdown && (
           <div className="pl-8">
             <Link href="/pick-up">
               <div className="px-4 py-2">Pick Up</div>
@@ -59,7 +56,7 @@ const Sidebar: React.FC = () => {
               <div className="px-4 py-2">Delivery</div>
             </Link>
           </div>
-        )}
+        )} */}
         {/* Message */}
         <Link href="/dashboard/message">
           <div className="flex items-center px-4 py-4">
@@ -128,7 +125,7 @@ const Sidebar: React.FC = () => {
       </div>
 
       {/* Downward Part */}
-      <div className="border-t  border-gray-700">
+      <div className="border-t border-gray-700">
         {/* Settings */}
         <Link href="/settings">
           <div className="flex items-center px-4 py-4">

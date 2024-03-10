@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} h-screen`}>
         <Header />
-        <div className="flex space-x-5  min-h-full">
+        <div className="max-w-screen-2xl mx-auto flex space-x-5 h-full">
           <Sidebar />
           {children}
         </div>

@@ -18,20 +18,20 @@ const Header: React.FC = () => {
 
   return (
     <header className="bg-[#000000]">
-      <div className="max-w-7xl mx-auto flex justify-between items-center py-1.5 text-white">
+      <div className="max-w-screen-2xl mx-auto flex justify-between items-center py-1.5 text-white">
         <div className="flex items-center">
-          <div className="ml-10 mr-20">
+          <div className="mr-20">
             <img src="/logo.svg" alt="Logo" className="w-24 h-16" />
           </div>
           <p className="text-lg font-semibold">Dashboard</p>
         </div>
 
-        <div className="flex justify-end items-center space-x-4 flex-grow mr-8">
-          <FiSearch className="w-6 h-6 cursor-pointer" />
+        <div className="flex justify-end items-center space-x-4 flex-grow">
+          {/* <FiSearch className="w-4 h-4 cursor-pointer" />
 
-          <FiMessageSquare className="w-6 h-6 cursor-pointer" />
+          <FiMessageSquare className="w-4 h-4 cursor-pointer" /> */}
 
-          <FiBell className="w-6 h-6 cursor-pointer" />
+          <FiBell className="w-4 h-4 cursor-pointer" />
 
           <div className="h-10 w-[2px] bg-[#ffffff] mx-4"></div>
 
