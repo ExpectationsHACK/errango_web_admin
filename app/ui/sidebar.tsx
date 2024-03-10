@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaChevronDown, FaChevronRight } from "react-icons/fa";
+import DocumentIcon from "./document";
 
 const Sidebar: React.FC = () => {
   const [showErrandsDropdown, setShowErrandsDropdown] = useState(false);
@@ -58,20 +59,14 @@ const Sidebar: React.FC = () => {
           </div>
         )} */}
         {/* Message */}
-        <Link href="/dashboard/message">
+        <Link href="/dashboard/kyc">
           <div className="flex items-center px-4 py-4">
-            <Image
-              className="mr-8"
-              src="/message.svg"
-              alt="message"
-              width={16}
-              height={16}
-            />
-            Message
+            <DocumentIcon />
+            KYC
           </div>
         </Link>
         {/* User */}
-        <Link href="/user">
+        <Link href="/dashboard/users">
           <div className="flex items-center px-4 py-4">
             <Image
               className="mr-8"
@@ -97,7 +92,7 @@ const Sidebar: React.FC = () => {
           </div>
         </Link>
         {/* Payment History */}
-        <Link href="/payment-history">
+        <Link href="/dashboard/transactions">
           <div className="flex items-center px-4 py-4">
             <Image
               className="mr-8"
@@ -106,7 +101,7 @@ const Sidebar: React.FC = () => {
               width={16}
               height={16}
             />
-            Payment History
+            Transactions
           </div>
         </Link>
         {/* Analytics */}

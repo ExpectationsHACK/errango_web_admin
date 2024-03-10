@@ -1,9 +1,12 @@
-import React from 'react'
+import TransactionTable from "@/app/ui/TransactionTable";
+import React from "react";
 
-const PaymentHistory = () => {
+const Transactions = () => {
   return (
-    <div>Payment History</div>
-  )
-}
+    <div className="w-full px-5">
+      <TransactionTable count={10} />
+    </div>
+  );
+};
 
-export default PaymentHistory;
+export default Transactions;
