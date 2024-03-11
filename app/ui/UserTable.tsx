@@ -1,7 +1,12 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import ViewButton from "./ViewButton";
+import UserSidebar from "./UserSidebar";
 
 const UserTable = ({ count }: { count: number }) => {
+  const [showSidebar, setShowSidebar] = useState(false);
+
   return (
     <div className="my-5">
       <div className="flex justify-between items-center">
@@ -79,7 +84,7 @@ const UserTable = ({ count }: { count: number }) => {
                   </span>
                 </td>
                 <td className="px-6 py-4 flex items-center justify-between mt-2">
-                  <ViewButton />
+                  <ViewButton onClick={() => setShowSidebar(true)} />
                 </td>
               </tr>
             ))}
@@ -137,6 +142,8 @@ const UserTable = ({ count }: { count: number }) => {
             </a>
           </div>
         </div>
+
+        {showSidebar && <UserSidebar onClose={() => setShowSidebar(false)} />}
       </div>
     </div>
   );

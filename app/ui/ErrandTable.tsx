@@ -1,8 +1,13 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import ViewButton from "./ViewButton";
 import DeleteButton from "./DeleteButton";
+import ErrandSidebar from "./ErrandSidebar";
 
 const ErrandTable = ({ count }: { count: number }) => {
+  const [showSidebar, setShowSidebar] = useState(false);
+
   return (
     <div className="my-5">
       <div className="flex justify-between items-center">
@@ -56,12 +61,12 @@ const ErrandTable = ({ count }: { count: number }) => {
                 LOCATION
               </th>
               <th scope="col" className="px-6 py-3">
-                ERRAND DETAILS
+                DESCRIPTION
               </th>
-              <th scope="col" className="px-6 py-3">
+              <th scope="col" className="px-6 py-3 whitespace-nowrap">
                 ERRAND TYPE
               </th>
-              <th scope="col" className="px-6 py-3">
+              <th scope="col" className="px-6 py-3 whitespace-nowrap">
                 ERRAND STATUS
               </th>
               <th scope="col" className="px-6 py-3">
@@ -96,8 +101,8 @@ const ErrandTable = ({ count }: { count: number }) => {
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">2 hours ago</td>
                 <td className="px-6 py-4 flex items-center justify-between mt-2">
-                  <ViewButton />
-                  <DeleteButton />
+                  <ViewButton onClick={() => setShowSidebar(true)} />
+                  {/* <DeleteButton /> */}
                 </td>
               </tr>
             ))}
@@ -155,6 +160,8 @@ const ErrandTable = ({ count }: { count: number }) => {
             </a>
           </div>
         </div>
+
+        {showSidebar && <ErrandSidebar onClose={() => setShowSidebar(false)} />}
       </div>
     </div>
   );

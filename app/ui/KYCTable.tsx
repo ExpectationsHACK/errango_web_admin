@@ -1,7 +1,11 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import ViewButton from "./ViewButton";
+import KYCSidebar from "./KYCSidebar";
 
 const KYCTable = ({ count }: { count: number }) => {
+  const [showSidebar, setShowSidebar] = useState(false);
   return (
     <div className="my-5">
       <div className="flex justify-between items-center">
@@ -83,7 +87,7 @@ const KYCTable = ({ count }: { count: number }) => {
                 </td>
                 <td className="px-6 py-4">2nd January 2020</td>
                 <td className="px-6 py-4 flex items-center justify-between mt-2">
-                  <ViewButton />
+                  <ViewButton onClick={() => setShowSidebar(true)} />
                 </td>
               </tr>
             ))}
@@ -141,6 +145,8 @@ const KYCTable = ({ count }: { count: number }) => {
             </a>
           </div>
         </div>
+
+        {showSidebar && <KYCSidebar onClose={() => setShowSidebar(false)} />}
       </div>
     </div>
   );

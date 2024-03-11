@@ -79,7 +79,7 @@ const Sidebar: React.FC = () => {
           </div>
         </Link>
         {/* Staff */}
-        <Link href="/staff">
+        {/* <Link href="/staff">
           <div className="flex items-center px-4 py-4">
             <Image
               className="mr-8"
@@ -90,7 +90,7 @@ const Sidebar: React.FC = () => {
             />
             Staff
           </div>
-        </Link>
+        </Link> */}
         {/* Payment History */}
         <Link href="/dashboard/transactions">
           <div className="flex items-center px-4 py-4">

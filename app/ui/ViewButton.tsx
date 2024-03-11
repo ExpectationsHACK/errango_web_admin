@@ -1,8 +1,12 @@
 import React from "react";
 
-const ViewButton = () => {
+type ViewButtonProps = {
+  onClick: () => void;
+};
+
+const ViewButton = ({ onClick }: ViewButtonProps) => {
   return (
-    <div>
+    <div onClick={() => onClick()}>
       <svg
         width="20"
         height="21"
