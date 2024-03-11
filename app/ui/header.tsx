@@ -18,7 +18,7 @@ const Header: React.FC = () => {
 
   return (
     <header className="bg-[#000000]">
-      <div className="max-w-screen-2xl mx-auto flex justify-between items-center py-1.5 text-white">
+      <div className="max-w-screen-2xl mx-auto flex justify-between items-center py-1.5 text-white px-5">
         <div className="flex items-center">
           <div className="mr-20">
             <img src="/logo.svg" alt="Logo" className="w-24 h-16" />
