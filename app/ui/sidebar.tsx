@@ -104,19 +104,6 @@ const Sidebar: React.FC = () => {
             Transactions
           </div>
         </Link>
-        {/* Analytics */}
-        <Link href="/dashboard/analytics">
-          <div className="flex items-center px-4 py-4">
-            <Image
-              className="mr-8"
-              src="/analytics.svg"
-              alt="analytics"
-              width={16}
-              height={16}
-            />
-            Analytics
-          </div>
-        </Link>
       </div>
 
       {/* Downward Part */}

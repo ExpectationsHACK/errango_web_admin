@@ -8,7 +8,7 @@ const ErrandTable = ({ count }: { count: number }) => {
       <div className="flex justify-between items-center">
         <p className="text-sm font-semibold text-gray-900">Recent Errands</p>
 
-        <div>
+        {/* <div>
           <div className="pb-4 bg-white">
             <label htmlFor="table-search" className="sr-only">
               Search
@@ -39,7 +39,7 @@ const ErrandTable = ({ count }: { count: number }) => {
               />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">

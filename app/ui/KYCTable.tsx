@@ -7,7 +7,7 @@ const KYCTable = ({ count }: { count: number }) => {
       <div className="flex justify-between items-center">
         <p className="text-sm font-semibold text-gray-900">KYC Request</p>
 
-        <div className="">
+        {/* <div className="">
           <div className="pb-4 bg-white">
             <label htmlFor="table-search" className="sr-only">
               Search
@@ -38,7 +38,7 @@ const KYCTable = ({ count }: { count: number }) => {
               />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
