@@ -1,9 +1,12 @@
+import ErrandTable from '@/app/ui/ErrandTable';
 import React from 'react'
 
-const PaymentHistory = () => {
+const Transactions = () => {
   return (
-    <div>Payment History</div>
+    <div>
+      
+    </div>
   )
 }
 
-export default PaymentHistory;
+export default Transactions;

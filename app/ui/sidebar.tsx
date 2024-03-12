@@ -58,7 +58,7 @@ const Sidebar: React.FC = () => {
           </div>
         )} */}
         {/* Message */}
-        <Link href="/dashboard/message">
+        <Link href="/dashboard/messages">
           <div className="flex items-center px-4 py-4">
             <Image
               className="mr-8"
